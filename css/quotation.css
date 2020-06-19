@@ -1,12 +1,12 @@
-p.quotation {
+/* p.quotation {
 
     flex-basis: 50px;
 
-    /* Flex to center the item */
+    padding: 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: #79A102;
-}
+    background-color: #46B580;
+} */
