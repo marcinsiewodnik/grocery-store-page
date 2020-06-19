@@ -1,0 +1,12 @@
+header {
+
+    flex-grow: 1;
+
+    align-self: center;
+    width: 100%;
+    max-width: var(--maxWidth);
+
+    flex-basis: calc(100vh - 8vh - 50px);
+
+    background-color: #D9E6EE;
+}

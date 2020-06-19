@@ -1,0 +1,90 @@
+nav.main {
+
+    /* Child */
+
+    flex-grow: 1;
+    flex-basis: 8vh;
+
+    /* Parent */
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #BCD641;
+}
+
+nav.main .wrapper {
+
+    /* Child */
+
+    flex-grow: 1;
+    max-width: var(--maxWidth);
+
+    /* Parent */
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    background-color: #33491B;
+}
+
+nav.main .wrapper ul {
+
+    /* Child */
+
+    flex-grow: 1;
+
+    /* Parent */
+
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+nav.main .wrapper ul li {
+
+    flex-basis: 25%;
+}
+
+nav.main .wrapper ul li a {
+
+    display: block;
+    padding: 10px;
+    border: none;
+
+    text-decoration: none;
+    text-align: center;
+
+    color: white;
+}
+
+nav.main .wrapper div.logo {
+
+    padding: 10px;
+
+    text-align: center;
+
+    background-color: #F7CC03;
+    color: black;
+}
+
+@media(min-width: 1025px) {
+
+    /* Here we design for desktops */
+
+    nav.main .wrapper {
+
+        flex-direction: row;
+    }
+
+    nav.main .wrapper ul {
+
+        flex-direction: row;
+    }
+
+    nav.main .wrapper div.logo {
+
+        flex-basis: 300px;
+    }
+}
