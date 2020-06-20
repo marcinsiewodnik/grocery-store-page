@@ -1,0 +1,177 @@
+/* Using gridbox */
+
+main .grid {
+
+    /* Grid -> creating the layout */
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 40vh 40vh 2fr 40vh;
+    grid-template-areas:
+        "first"
+        "second"
+        "third"
+        "forth"
+        "fifth"
+    ;
+
+    min-height: 100vh;
+
+    font-size: 16px;
+}
+
+main .grid div {
+
+    /* This element is a grid child and flex parent at the same time */
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 40px;
+
+}
+
+/* Flex child elements */
+
+main .grid div h2 {
+
+    flex-basis: 50px;
+
+    text-align: center;
+}
+
+main .grid div p {
+
+    flex-grow: 1;
+
+    line-height: 180%;
+    text-align: justify;
+}
+
+main .grid div.second button {
+
+    flex-basis: 50px;
+
+    border: 3px solid black;
+
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    background-color: #FFBC23;
+}
+
+main .grid div.first {
+
+    grid-area: first;
+
+    background-color: #FFBC23;
+}
+
+main .grid div.second {
+
+    grid-area: second;
+
+    background-color: #46B580;
+}
+
+main .grid div.third.picture {
+
+    grid-area: third;
+
+    margin: 20px 20px 10px 20px;
+
+    /* Adding picture as a background */
+
+    background-image: url("../img-grid/salad.jpg");
+
+}
+
+main .grid div.forth.picture {
+
+    grid-area: forth;
+
+    margin: 10px 20px 20px 20px;
+
+    background-image: url("../img-grid/orange.jpg");
+}
+
+main .grid div.picture {
+
+    background-position: center;
+    background-size: cover;
+
+}
+
+main .grid div.fifth {
+
+    grid-area: fifth;
+
+    background-color: #46B580;
+}
+
+@media(orientation: landscape) {
+
+    main .grid {
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 80vh 1fr;
+
+        grid-template-areas:
+            "first first"
+            "second second"
+            "third forth"
+            "fifth fifth"
+        ;
+
+    }
+
+    /* When we change the laout, we also change the pictures' properties */
+
+    main .grid div.third.picture {
+
+        margin: 20px 10px 20px 20px;
+    }
+
+    main .grid div.forth.picture {
+
+        margin: 20px 20px 20px 10px;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    main .grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        grid-template-areas:
+            "first first second"
+            "third forth second"
+            "fifth fifth fifth"
+        ;
+
+        padding: 50px;
+    }
+
+    /* Nice spaces between elements */
+
+    main .grid div {
+
+        margin: 5px;
+    }
+
+    main .grid div.third.picture {
+
+        margin: 5px;
+    }
+
+    main .grid div.forth.picture {
+
+        margin: 5px;
+
+    }
+}

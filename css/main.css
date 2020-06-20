@@ -21,7 +21,7 @@ main {
 
     min-height: 100vh;
 
-    background-color: #D9E6EE;
+
 }
 
 main .wrapper {
@@ -41,14 +41,20 @@ main .wrapper section.about {
 
     flex-grow: 1;
 
+    background-color: #D9E6EE;
 
-    background-color: #c5d68a3a;
+}
+
+main .wrapper section.about h2 {
+
+    text-align: center;
 }
 
 main .wrapper section.products {
 
-    flex-grow: 1;
+    margin-top: 500px;
 
+    flex-grow: 1;
 
     background-color: #c5d68a93;
 }
@@ -58,14 +64,13 @@ main .wrapper section.offer {
     flex-grow: 1;
 
     background-color: #C5D68A;
-
 }
 
 main aside {
 
     flex-basis: 20vh;
 
-    background-color: #BCD641;
+    /* background-color: #BCD641; */
 }
 
 @media(min-width: 1025px) {
