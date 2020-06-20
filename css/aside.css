@@ -1,0 +1,63 @@
+main aside {
+
+    /* On mobile devices we don't have the aside section */
+
+    display: none;
+}
+
+@media(min-width: 1025px) {
+
+    main {
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    main .wrapper {
+
+        flex-basis: calc(100% - 350px);
+    }
+
+    main aside {
+
+        /* Now aside section will be visible */
+
+        display: block;
+
+        flex-basis: 300px;
+
+        /* padding: 20px; */
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    main aside .news {
+
+        flex-grow: 1;
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    main aside .news .newsItem {
+
+        flex-basis: 250px;
+
+        margin: 0 0 20px 50px;
+
+        background-color: #1F6097;
+    }
+
+    main aside .news .newsItem:last-child {
+
+        flex-grow: 1;
+
+        flex-basis: 300px;
+
+        margin-bottom: 0;
+    }
+
+}

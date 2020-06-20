@@ -2,26 +2,11 @@ main {
 
     /* Child */
 
-    flex-grow: 1;
-
     align-self: center;
     width: 100%;
     max-width: var(--maxWidth);
 
-    /* Parent */
-
-    /* Child */
-
-    flex-grow: 1;
-
-    /* Parent */
-
-    display: flex;
-    flex-direction: column;
-
     min-height: 100vh;
-
-
 }
 
 main .wrapper {
@@ -29,59 +14,30 @@ main .wrapper {
     /* Child */
 
     flex-grow: 1;
-
-    /* Parent */
-
-    display: flex;
-    flex-direction: column;
-
 }
 
-main .wrapper section.about {
+main h2 {
 
-    flex-grow: 1;
-
-    background-color: #D9E6EE;
-
-}
-
-main .wrapper section.about h2 {
+    /* This selector is for every h2  */
+    /* Here I'm trying to reduce code duplication */
 
     text-align: center;
+
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
-main .wrapper section.products {
+main .wrapper section div.container {
 
-    margin-top: 500px;
+    height: 300px;
 
-    flex-grow: 1;
-
-    background-color: #c5d68a93;
-}
-
-main .wrapper section.offer {
-
-    flex-grow: 1;
-
-    background-color: #C5D68A;
-}
-
-main aside {
-
-    flex-basis: 20vh;
-
-    /* background-color: #BCD641; */
+    background-color: #aaa;
 }
 
 @media(min-width: 1025px) {
 
     main {
 
-        flex-direction: row;
-    }
-
-    main aside {
-
-        flex-basis: 300px;
+        padding: 30px;
     }
 }

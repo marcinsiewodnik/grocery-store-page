@@ -6,7 +6,7 @@ main .grid {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr 40vh 40vh 2fr 40vh;
+    grid-template-rows: 2fr 2fr 40vh 40vh 2fr;
     grid-template-areas:
         "first"
         "second"
@@ -145,7 +145,7 @@ main .grid div.fifth {
 
         display: grid;
 
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 350px;
         grid-template-rows: 1fr 1fr 1fr;
 
         grid-template-areas:
@@ -154,7 +154,9 @@ main .grid div.fifth {
             "fifth fifth fifth"
         ;
 
-        padding: 50px;
+        /* padding: 50px; */
+
+        padding-right: 0;
     }
 
     /* Nice spaces between elements */
