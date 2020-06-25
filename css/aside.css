@@ -51,13 +51,4 @@ main aside {
         background-color: #1F6097;
     }
 
-    main aside .news .newsItem:last-child {
-
-        flex-grow: 1;
-
-        flex-basis: 300px;
-
-        margin-bottom: 0;
-    }
-
 }

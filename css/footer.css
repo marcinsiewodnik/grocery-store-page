@@ -26,24 +26,6 @@ footer .wrapper div {
     text-align: center;
 }
 
-footer .wrapper div:nth-child(1) {
-
-    background-color: cadetblue;
-
-}
-
-footer .wrapper div:nth-child(2) {
-
-    background-color: royalblue;
-
-}
-
-footer .wrapper div:nth-child(3) {
-
-    background-color: orange;
-
-}
-
 footer p {
 
     line-height: 75px;
@@ -65,3 +47,22 @@ footer p {
         flex-basis: 20%;
     }
 }
+
+/* 
+footer .wrapper div:nth-child(1) {
+
+    background-color: cadetblue;
+
+}
+
+footer .wrapper div:nth-child(2) {
+
+    background-color: royalblue;
+
+}
+
+footer .wrapper div:nth-child(3) {
+
+    background-color: orange;
+
+} */

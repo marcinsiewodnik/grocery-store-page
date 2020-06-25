@@ -27,17 +27,10 @@ main h2 {
     padding-bottom: 30px;
 }
 
-main .wrapper section div.container {
-
-    height: 300px;
-
-    background-color: #aaa;
-}
-
 @media(min-width: 1025px) {
 
     main {
 
-        padding: 30px;
+        padding: 0 40px 40px 40px;
     }
 }

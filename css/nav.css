@@ -11,11 +11,8 @@ p.quotation {
 
     height: 50px;
 
-    /* Flex to center the item */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    line-height: 50px;
 
     background-color: #46B580;
 }
@@ -113,6 +110,8 @@ nav.main .wrapper ul li a {
 
         top: 0;
         left: 0;
+
+        box-shadow: 0 0 6px 0 black;
     }
 
     /* Here we design for desktops */
@@ -194,4 +193,35 @@ nav.main .wrapper ul li a {
         transform: translate(-50%, -50%) rotate(0deg);
     }
 
+}
+
+/* Nav - animation in javascript */
+
+@media(min-width: 1025px) {
+
+    nav.main {
+
+        transform: translateY(0);
+        transition: .2s linear;
+    }
+
+    /* Animation -> adding and removing a class */
+
+    nav.main.active {
+
+        /* When creating an animation -> transform is a very good idea */
+
+        transform: translateY(-50px);
+        background-color: #46B580;
+    }
+
+    nav.main .wrapper ul li a {
+
+        transition: 0.2s linear;
+    }
+
+    nav.main.active .wrapper ul li a {
+
+        color: black;
+    }
 }

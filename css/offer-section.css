@@ -1,0 +1,98 @@
+/* Start with mobile */
+
+section.offer div.price-list {
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 20px;
+}
+
+section.offer div.price-list div.col {
+
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    background-color: #1f5f9762;
+
+}
+
+section.offer div.price-list div.col h3 {
+
+    padding: 10px 0 15px 0;
+}
+
+section.offer div.price-list div.col img {
+
+    width: 50%;
+
+    /* To center the picture -> it's visible when the image is less than 100% */
+
+    align-self: center;
+}
+
+section.offer div.price-list div.col p {
+
+    padding: 10px;
+}
+
+section.offer div.price-list div.col p span {
+
+    /* Span as a button */
+
+    display: inline-block;
+
+    width: auto;
+    padding: 10px 20px;
+    border: 2px solid black;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 533px) {
+
+    section.offer div.price-list {
+
+        width: 60%;
+        margin: 0 auto;
+    }
+
+}
+
+/* Design on desktop */
+
+@media (min-width: 1025px) {
+
+    section.offer div.price-list {
+
+        width: 100%;
+    }
+
+    section.offer div.price-list {
+
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    section.offer div.price-list div.col {
+
+        flex-basis: 25%;
+    }
+
+    section.offer div.price-list div.col p:last-child {
+
+        /* to position the button at the bottom */
+
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

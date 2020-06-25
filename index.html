@@ -18,37 +18,43 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/about-section-grid.css">
     <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/offer-section.css">
+    <link rel="stylesheet" href="css/products.css">
 
 </head>
 
 <body>
 
+    <!-- I put nav not in the main page wrapper -->
+
+    <nav class="main">
+
+        <p class="quotation">We are what we eat!</p>
+
+        <div class="wrapper">
+
+            <!-- Add data attributes -> java script code -->
+
+            <ul>
+                <li><a href="#" data-nav="about">About</a></li>
+                <li><a href="#" data-nav="products">Products</a></li>
+                <li><a href="#" data-nav="offer">Offer</a></li>
+
+            </ul>
+
+            <div class="logo"><img src="img/nav/mandala.png" alt=""></div>
+
+        </div>
+
+    </nav>
+
     <div class="main wrapper">
-
-        <nav class="main">
-
-            <p class="quotation">We are what we eat!</p>
-
-            <div class="wrapper">
-
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Today offer</a></li>
-
-                </ul>
-
-                <div class="logo"><img src="img/mandala.png" alt=""></div>
-
-            </div>
-
-        </nav>
 
         <header>
 
-            <img src="img/juice.png" alt="">
-            <img src="img/salad.png" alt="">
-            <img src="img/fruit.png" alt="">
+            <img src="img/baner/juice.png" alt="">
+            <img src="img/baner/salad.png" alt="">
+            <img src="img/baner/fruit.png" alt="">
 
             <h1 class="title">Beverages</h1>
             <h1 class="title">Fruits and vegetables</h1>
@@ -60,15 +66,19 @@
 
             <div class="wrapper">
 
-                <section class="about">
+                <!-- Add data attributes -> java script code -->
+
+                <section class="about" data-section="about">
 
                     <h2>About</h2>
 
                     <div class="grid">
 
-                        <div class="first">
+                        <!-- I think, it's unnecessary to give classes like first, second -> in css we have pseudoclasses -->
 
-                            <h2>First div</h2>
+                        <div>
+
+                            <h3>First div</h3>
 
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolor dignissimos aut,
                                 quidem eaque laudantium vitae quas provident doloremque quo ratione tenetur voluptatem
@@ -77,24 +87,28 @@
                                 quam quidem aliquid ipsa hic maxime eum eveniet vero quos tempora iure voluptatem!</p>
 
                         </div>
-                        <div class="second">
 
-                            <h2>Second div</h2>
+                        <div class="button-down">
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nostrum ullam tempora totam
-                                ab rem ipsum illo vero perferendis maiores, optio velit adipisci repellendus cum,
-                                possimus dicta, iste vel! Blanditiis. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quo dolor ducimus soluta, aliquid cum voluptatibus voluptates vero
-                                debitis sit sapiente tempore eius fuga numquam laudantium voluptatum autem quibusdam
-                                magnam optio!</p>
+                            <h3>Second div</h3>
 
-                            <button>See more</button>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolor dignissimos aut,
+                                quidem eaque laudantium vitae quas provident doloremque quo ratione tenetur voluptatem
+                                facilis corrupti earum! Modi odit sed natus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Error, architecto quas voluptatem ducimus exercitationem quae nobis
+                                neque praesentium, provident mollitia eligendi laudantium nisi et quod ab doloremque!
+                                Eos, consequatur eligendi!</p>
+
+                            <p> <button>See more</button></p>
 
                         </div>
-                        <div class="third picture">Third div</div>
-                        <div class="forth picture">Forth div</div>
-                        <div class="fifth">
-                            <h2>Fifth div</h2>
+
+                        <div class="picture"><img src="img/grid/orange.jpg" alt=""></div>
+
+                        <div class="picture"><img src="img/grid/orange.jpg" alt=""></div>
+
+                        <div>
+                            <h3>Fifth div</h3>
 
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolor dignissimos aut,
                                 quidem eaque laudantium vitae quas provident doloremque quo ratione tenetur voluptatem
@@ -104,22 +118,136 @@
                                 Eos, consequatur eligendi!</p>
                         </div>
 
+                    </div>
+
+                </section>
+                <section class="products" data-section="products">
+
+                    <h2>Products</h2>
+
+                    <div class="galery">
+
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
+                        <div class="product">
+
+                            <h3>First</h3>
+
+                            <img src="img/products/apples.png" alt="">
+
+                            <p><span class="price">100 dollars</span></p>
+
+                        </div>
 
                     </div>
 
                 </section>
-                <section class="products">
-
-                    <h2>Products</h2>
-
-                    <div class="container"></div>
-
-                </section>
-                <section class="offer">
+                <section class="offer" data-section="offer">
 
                     <h2>Offer</h2>
 
-                    <div class="container"></div>
+                    <div class="price-list">
+
+                        <div class="col">
+
+                            <h3>Option 1</h3>
+                            <img src="img/offer/orange.png" alt="">
+                            <p>Very cheap</p>
+                            <p class="price"><span>100 dollars</span></p>
+
+                        </div>
+                        <div class="col">
+
+                            <h3>Option 2</h3>
+                            <img src="img/offer/orange.png" alt="">
+                            <p>Not cheap</p>
+                            <p>Surpise in the package</p>
+                            <p class="price"><span>300 dollars</span></p>
+
+                        </div>
+                        <div class="col">
+
+                            <h3>Option 3</h3>
+                            <img src="img/offer/orange.png" alt="">
+                            <p>Very expensive</p>
+                            <p>Amazing aroma</p>
+                            <p>Cookie for free</p>
+
+                            <p class="price"><span>500 dollars</span></p>
+
+                        </div>
+
+                    </div>
 
                 </section>
 
@@ -139,7 +267,11 @@
 
                     <div class="newsItem"></div>
 
+                    <div class="newsItem"></div>
 
+                    <div class="newsItem"></div>
+
+                    <div class="newsItem"></div>
 
                 </section>
 
@@ -162,6 +294,13 @@
         </footer>
 
     </div>
+
+    <!-- Add jquery -> scroll animation -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="jquery/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

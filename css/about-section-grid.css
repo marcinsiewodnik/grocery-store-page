@@ -6,7 +6,7 @@ main .grid {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr 40vh 40vh 2fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
         "first"
         "second"
@@ -15,107 +15,143 @@ main .grid {
         "fifth"
     ;
 
-    min-height: 100vh;
-
     font-size: 16px;
 }
 
 main .grid div {
 
-    /* This element is a grid child and flex parent at the same time */
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 20px 40px;
-
+    padding: 0 30px 30px 30px;
 }
 
-/* Flex child elements */
+/* Grid child elements*/
 
-main .grid div h2 {
+/* Text elements */
 
-    flex-basis: 50px;
+main .grid div h3 {
+
+    padding: 15px;
 
     text-align: center;
 }
 
 main .grid div p {
 
-    flex-grow: 1;
-
     line-height: 180%;
     text-align: justify;
 }
 
-main .grid div.second button {
+/* Picture elements */
 
-    flex-basis: 50px;
 
+main .grid div.picture {
+
+    padding: 0;
+    margin: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+main .grid div.picture img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+/* The element with a button */
+
+main .grid div:nth-of-type(3) {
+
+    margin: 20px 10px 20px 20px;
+}
+
+main .grid div:nth-of-type(4) {
+
+    margin: 20px 20px 20px 10px;
+}
+
+main .grid div.button-down {
+
+    grid-area: second;
+
+    background-color: #46B580;
+
+    /* This is a trick to position the button at the bottom */
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .grid div.button-down p:last-child {
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding-top: 30px;
+}
+
+main .grid div.button-down p:last-child button {
+
+    align-self: center;
+
+    padding: 10px 20px;
     border: 3px solid black;
 
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 2px;
 
     background-color: #FFBC23;
 }
 
-main .grid div.first {
+/* Elements from 1 to 5 */
+
+main .grid div:nth-of-type(1) {
 
     grid-area: first;
 
     background-color: #FFBC23;
 }
 
-main .grid div.second {
+main .grid div:nth-of-type(2) {
 
     grid-area: second;
 
     background-color: #46B580;
 }
 
-main .grid div.third.picture {
+main .grid div:nth-of-type(3) {
 
     grid-area: third;
-
-    margin: 20px 20px 10px 20px;
-
-    /* Adding picture as a background */
-
-    background-image: url("../img-grid/salad.jpg");
-
 }
 
-main .grid div.forth.picture {
+main .grid div:nth-of-type(4) {
 
     grid-area: forth;
-
-    margin: 10px 20px 20px 20px;
-
-    background-image: url("../img-grid/orange.jpg");
 }
 
-main .grid div.picture {
-
-    background-position: center;
-    background-size: cover;
-
-}
-
-main .grid div.fifth {
+main .grid div:nth-of-type(5) {
 
     grid-area: fifth;
 
     background-color: #46B580;
 }
 
+
 @media(orientation: landscape) {
+
+    /* We change the layout for this resolution -> pictures */
 
     main .grid {
 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 80vh 1fr;
+        grid-template-rows: auto auto auto auto;
 
         grid-template-areas:
             "first first"
@@ -124,18 +160,6 @@ main .grid div.fifth {
             "fifth fifth"
         ;
 
-    }
-
-    /* When we change the laout, we also change the pictures' properties */
-
-    main .grid div.third.picture {
-
-        margin: 20px 10px 20px 20px;
-    }
-
-    main .grid div.forth.picture {
-
-        margin: 20px 20px 20px 10px;
     }
 }
 
@@ -146,34 +170,27 @@ main .grid div.fifth {
         display: grid;
 
         grid-template-columns: 1fr 1fr 350px;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
 
         grid-template-areas:
             "first first second"
             "third forth second"
             "fifth fifth fifth"
         ;
-
-        /* padding: 50px; */
-
-        padding-right: 0;
     }
-
-    /* Nice spaces between elements */
 
     main .grid div {
 
-        margin: 5px;
+        margin: 10px;
     }
 
-    main .grid div.third.picture {
+    main .grid div:nth-of-type(3) {
 
-        margin: 5px;
+        margin: 0 10px;
     }
 
-    main .grid div.forth.picture {
+    main .grid div:nth-of-type(4) {
 
-        margin: 5px;
-
+        margin: 0 10px;
     }
 }
