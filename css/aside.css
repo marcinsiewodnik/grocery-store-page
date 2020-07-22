@@ -26,8 +26,6 @@ main aside {
 
         flex-basis: 300px;
 
-        /* padding: 20px; */
-
         display: flex;
 
         flex-direction: column;
@@ -46,9 +44,17 @@ main aside {
 
         flex-basis: 250px;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         margin: 0 0 20px 50px;
 
-        background-color: #1F6097;
+        border: 2px solid #333;
+        box-shadow: 0 0 5px 0 #333;
+
+        border-radius: 5%;
+
     }
 
 }

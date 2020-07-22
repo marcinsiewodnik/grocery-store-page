@@ -1,0 +1,13 @@
+Grocery store project
+
+1. html, css, jquery
+
+2. nav -> flexbox, animation, responsiveness, pseudoelement to create animation, hamburger menu on mobile devices
+
+3. header -> slider animation using css animation
+
+4. about -> grid layout
+
+5. Products, offer -> flexbox layout
+
+6. Using jquery -> menu hamburger, go to section, creating elements and populating products and offer, changing menu position after scrolling

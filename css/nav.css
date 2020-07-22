@@ -1,162 +1,213 @@
-nav.main {
+/* burger logic -> in query */
 
-    /* It's not in the page structure */
+.fas {
 
-    background-color: #F4F4F4;
+    display: none;
+
 }
 
-p.quotation {
+i.show {
 
-    /* I've taken qutation to nav */
+    display: block;
+}
 
-    height: 50px;
+.burger-wrapper {
+
+    height: 60px;
+
+    color: black;
+}
+
+.burger {
+
+    position: absolute;
+    z-index: 1;
+
+    top: 10px;
+    right: 10px;
+
+    font-size: 40px;
+}
+
+.burger:hover {
+
+    cursor: pointer;
+}
+
+nav.main p.quotation {
+
+    height: 60px;
 
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
 
-    background-color: #46B580;
+    color: #ddd;
+    background-color:#333;
+
+    position: relative;
+    z-index: 1;
+
 }
 
-nav.main .wrapper {
+nav.main .logo {
 
-    max-width: var(--maxWidth);
-    margin: 0 auto;
+    height: 60px;
 
-    /* Parent  */
+    text-align: center;
+    background-color:#333;
 
-    display: flex;
-    flex-direction: column-reverse;
+    position: relative;
+    z-index: 1;
+
 }
 
-nav.main .wrapper ul {
+nav.main .logo img {
 
-    /* Child */
+    width: 50px;
 
-    flex-grow: 1;
+    animation: logo 2s infinite linear;
+}
 
-    /* Parent */
+.menu-desktop {
+
+    display: none;
+}
+
+.menu-mobile {
+
+    position: relative;
+}
+
+.menu-mobile ul {
+
+    position: absolute;
+
+    top: -180px;
+    left: 0;
+
+    width: 100%;
 
     display: flex;
     flex-direction: column;
 
-    list-style: none;
+    transition: 1s;
+
+    background-color: #3BAC44;
 }
 
-nav.main .wrapper div.logo {
+.menu-mobile ul.show  {
 
-    flex-basis: 100px;
-
-    position: relative;
-}
-
-nav.main .wrapper div.logo img {
-
-    /* img is inside div.logo */
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    max-width: 85%;
-    max-height: 85%;
-
-    /* Adding animation */
-
-    animation: logo 3s linear infinite;
-}
-
-nav.main .wrapper ul li {
-
-    flex-basis: 20%;
+    top: 0;
 
 }
 
-nav.main .wrapper ul li a {
+.menu-mobile ul li a {
 
-    flex-grow: 1;
-
-    /* Color animation -> that's why it has to be relative*/
-
-    position: relative;
+    height: 60px;
+    line-height: 60px;
 
     display: block;
     width: 100%;
-
-    line-height: 70px;
-
-    border: none;
+    
     text-decoration: none;
+
     text-align: center;
-    color: green;
-
-    /* Color animation */
-
-    transition: background-color 0.2 linear;
-    overflow: hidden;
+    color: #ddd;
 }
 
 @media(min-width: 1025px) {
+
+    .menu-mobile {
+
+        display: none;
+    }
+
+    .menu-desktop {
+
+        display: block;
+
+        background-color: #3BAC44;
+
+        box-shadow: 0 0 5px 0 black;
+    }
 
     nav.main {
 
-        /* We are positioning relative to the browser */
-
         position: fixed;
+        top:0;
+        left:0;
 
         width: 100%;
 
-        top: 0;
-        left: 0;
-
-        box-shadow: 0 0 6px 0 black;
+        transition: 0.5s;
     }
 
-    /* Here we design for desktops */
+    nav.main.active {
 
-    nav.main .wrapper {
-
-        flex-direction: row;
-        padding: 0 100px;
-
-        height: 70px;
+        top: -120px;
     }
 
-    nav.main .wrapper ul {
+    .menu-desktop ul {
 
-        flex-direction: row;
-    }
-}
+        padding: 10px 10px 0 10px;
 
-/* Transition */
+        max-width: 1000px;
+        margin: 0 auto;
 
-@media(min-width: 1025px) {
-
-    nav.main .wrapper ul li a:hover {
-
-        color: black
+        list-style: none;
+        display: flex;
     }
 
-    nav.main .wrapper ul li a::after {
+    .menu-desktop ul li {
+
+        flex-basis: 20%;
+
+        flex-grow: 1;
+
+    }
+
+    .menu-desktop ul li a {
+
+        display: block;
+        width: 100%;
+
+        text-align: center;
+
+        height: 60px;
+        line-height: 60px;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: #ddd;
+
+        position: relative;
+
+        overflow: hidden;
+
+    }
+
+    .menu-desktop ul li a::after {
 
         content: "";
 
-        position: absolute;
-
-        left: -100%;
-        bottom: 0;
-
+        display: block;
+        
         width: 100%;
         height: 5px;
 
-        transition: 0.4s linear;
-
         background-color: black;
+
+        position: absolute;
+
+        bottom: 0;
+        left: -100%;
+
+        transition: 0.2s;
+
     }
 
-    nav.main .wrapper ul li a:hover::after {
+    .menu-desktop ul li a:hover::after {
 
         left: 0;
     }
@@ -169,59 +220,28 @@ nav.main .wrapper ul li a {
 
     0% {
 
-        transform: translate(-50%, -50%) rotate(0);
+        transform: rotate(0);
 
     }
 
     25% {
 
-        transform: translate(-50%, -50%) rotate(-35deg);
+        transform: rotate(-35deg);
     }
 
     50% {
 
-        transform: translate(-50%, -50%) rotate(0);
+        transform: rotate(0);
     }
 
     75% {
 
-        transform: translate(-50%, -50%) rotate(35deg);
+        transform: rotate(35deg);
     }
 
     100% {
 
-        transform: translate(-50%, -50%) rotate(0deg);
+        transform: rotate(0deg);
     }
 
-}
-
-/* Nav - animation in javascript */
-
-@media(min-width: 1025px) {
-
-    nav.main {
-
-        transform: translateY(0);
-        transition: .2s linear;
-    }
-
-    /* Animation -> adding and removing a class */
-
-    nav.main.active {
-
-        /* When creating an animation -> transform is a very good idea */
-
-        transform: translateY(-50px);
-        background-color: #46B580;
-    }
-
-    nav.main .wrapper ul li a {
-
-        transition: 0.2s linear;
-    }
-
-    nav.main.active .wrapper ul li a {
-
-        color: black;
-    }
 }

@@ -17,7 +17,11 @@ section.products div.galery div.product {
 
     text-align: center;
 
-    background-color: #999;
+    border: 1px solid #333;
+
+    border-radius: 5%;
+
+    box-shadow: 0 0 5px 0 #333;
 }
 
 section.products div.galery div.product h3 {
@@ -33,7 +37,13 @@ section.products div.galery div.product img {
 
 section.products div.galery div.product p {
 
+    flex-grow: 1;
+
     padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 section.products div.galery div.product p span {
@@ -42,9 +52,15 @@ section.products div.galery div.product p span {
 
     width: auto;
     padding: 10px 20px;
-    border: 2px solid black;
 
-    background-color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+
+    background-color: #3BAC44;
+
+    color: white;
+
+
 }
 
 @media(min-width: 533px) {

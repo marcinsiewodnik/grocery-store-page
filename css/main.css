@@ -18,9 +18,6 @@ main .wrapper {
 
 main h2 {
 
-    /* This selector is for every h2  */
-    /* Here I'm trying to reduce code duplication */
-
     text-align: center;
 
     padding-top: 50px;

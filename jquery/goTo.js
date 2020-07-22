@@ -1,13 +1,10 @@
 $('nav a').on('click', function () {
 
     const windowVariable = $(window);
-    const nav = $("nav.main div.wrapper");
+    const windowWidth = windowVariable.width();
     const page = $("body, html")
 
     const goToSection = '[data-section=' + $(this).attr('data-nav') + ']';
-
-    const windowWidth = windowVariable.width();
-    const navHeight = nav.outerHeight();
 
     // Different behaviour on mobile and desktop
 
@@ -23,7 +20,7 @@ $('nav a').on('click', function () {
 
         page.animate({
 
-            scrollTop: $(goToSection).offset().top - navHeight
+            scrollTop: $(goToSection).offset().top + 70
 
         }, 500);
     }
