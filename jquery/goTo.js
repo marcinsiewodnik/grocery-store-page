@@ -20,7 +20,7 @@ $('nav a').on('click', function () {
 
         page.animate({
 
-            scrollTop: $(goToSection).offset().top + 70
+            scrollTop: $(goToSection).offset().top - 70
 
         }, 500);
     }
