@@ -25,8 +25,6 @@ let offersArr = [
         desc: ["A lot of fruit", "Ideal for birthday", "Many flavours"],
         price: 20
     }
-
-
 ]
 
 // I create an array of divElements
@@ -43,7 +41,6 @@ offersArr = offersArr.map(offer => {
 
         </div>`
     )
-
 
     for (let i = 0; i < offer.desc.length; i++) {
 

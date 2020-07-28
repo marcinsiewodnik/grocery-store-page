@@ -41,9 +41,7 @@ let productsArr = [
         name: 'juice',
         src: 'img/products/juice.png',
         price: 2.5
-
     },
-
 ]
 
 productsArr = productsArr.map(product => {
@@ -55,7 +53,7 @@ productsArr = productsArr.map(product => {
             <h3>${product.name}</h3>
             <img src=${product.src}> 
             <p> <span class="price">${product.price} $</span></p>
-           
+       
          </div>`
     )
 
@@ -66,4 +64,3 @@ productsArr.forEach(product => {
 
     productsGalery.append(product);
 });
-

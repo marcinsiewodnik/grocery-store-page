@@ -34,10 +34,9 @@ main .grid {
             "forth"
             "fifth"
         ;
-    
+
         font-size: 20px;
     }
-
 }
 
 main .grid div {
@@ -64,7 +63,6 @@ main .grid div p {
 
 /* Picture elements */
 
-
 main .grid div.picture {
 
     padding: 0;
@@ -83,54 +81,6 @@ main .grid div.picture img {
 
     display: block;
 
-}
-
-main .grid div.button-down {
-
-    grid-area: second;
-
-    background-color: #3BAC44;
-
-    /* This is a trick to position the button at the bottom */
-
-    display: flex;
-    flex-direction: column;
-}
-
-main .grid div.button-down p:last-child {
-
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    padding-top: 30px;
-}
-
-main .grid div.button-down p:last-child button {
-
-    align-self: center;
-
-    padding: 10px 20px;
-
-    font-size: 18px;
-    text-transform: uppercase;
-
-    background-color: orange;
-
-    border: none;
-
-    border-top-left-radius: 20%;
-    border-bottom-right-radius: 20%;
-}
-
-@media(min-width: 1025px){
-    
-    main .grid div.button-down p:last-child button {
-
-        font-size: 24px;
-    }
 }
 
 /* Elements from 1 to 5 */
@@ -191,7 +141,6 @@ main .grid div:nth-of-type(5) {
 @media(min-width: 1025px){
 
     main .grid div:nth-of-type(5) {
-
     
         border-top-right-radius: 10%;
         border-bottom-left-radius: 10%;
@@ -200,8 +149,6 @@ main .grid div:nth-of-type(5) {
 
 
 @media(orientation: landscape) {
-
-    /* We change the layout for this resolution -> pictures */
 
     main .grid {
 
@@ -239,12 +186,7 @@ main .grid div:nth-of-type(5) {
         margin: 10px;
     }
 
-    main .grid div:nth-of-type(3) {
-
-        margin: 0 10px;
-    }
-
-    main .grid div:nth-of-type(4) {
+    main .grid div:nth-of-type(3),   main .grid div:nth-of-type(4) {
 
         margin: 0 10px;
     }

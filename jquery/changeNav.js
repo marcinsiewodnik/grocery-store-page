@@ -21,6 +21,8 @@ const changeNav = () => {
     }
 }
 
+// Scrolling trigers this event
+
 $(window).on("scroll", changeNav);
 
 
