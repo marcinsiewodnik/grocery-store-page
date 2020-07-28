@@ -7,23 +7,11 @@ footer {
     color: #ddd;
     background-color: #333;
 
-    height: 100px;
-
-    display: flex;
-
-    flex-direction: column;
 }
 
-footer div {
+footer p {
 
-    flex-basis: 50%;
-    
-    flex-grow: 1;
-}
-
-footer div p {
-
-    line-height: 50px;
+    line-height: 100px;
 }
 
 @media(min-width: 1025px){
