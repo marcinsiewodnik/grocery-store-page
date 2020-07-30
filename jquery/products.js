@@ -4,42 +4,42 @@ let productsArr = [
 
     {
         name: 'apple',
-        src: 'img/products/apple.png',
+        src: 'img/products/apple-min.png',
         price: 2.5
 
     },
 
     {
         name: 'cabbage',
-        src: 'img/products/cabbage.png',
+        src: 'img/products/cabbage-min.png',
         price: 3
 
     },
 
     {
         name: 'carrot',
-        src: 'img/products/carrot.png',
+        src: 'img/products/carrot-min.png',
         price: 2.5
 
     },
 
     {
         name: 'cucumber',
-        src: 'img/products/cucumber.png',
+        src: 'img/products/cucumber-min.png',
         price: 2.5
 
     },
 
     {
         name: 'onion',
-        src: 'img/products/onion.png',
+        src: 'img/products/onion-min.png',
         price: 2.5
 
     },
 
     {
         name: 'juice',
-        src: 'img/products/juice.png',
+        src: 'img/products/juice-min.png',
         price: 2.5
     },
 ]

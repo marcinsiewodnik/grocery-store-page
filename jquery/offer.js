@@ -6,7 +6,7 @@ let offersArr = [
 
     {
         name: 'Healthy',
-        src: 'img/offer/healthy-food.png',
+        src: 'img/offer/healthy-food-min.png',
         desc: ["Healthy vegetables"],
         price: 10
 
@@ -14,14 +14,14 @@ let offersArr = [
 
     {
         name: 'Fresh',
-        src: 'img/offer/fresh.png',
+        src: 'img/offer/fresh-min.png',
         desc: ["Vegetables and fruit", "Ideal for summer"],
         price: 15
     },
 
     {
         name: 'Sweet',
-        src: 'img/offer/sweet.png',
+        src: 'img/offer/sweet-min.png',
         desc: ["A lot of fruit", "Ideal for birthday", "Many flavours"],
         price: 20
     }
